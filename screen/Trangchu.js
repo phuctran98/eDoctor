@@ -15,7 +15,7 @@ export default class Trangchu extends Component {
 
                             </Image>
                             <Text>
-                                Khám và xét nghiệm
+                                Khám và xét nghiệm hhh
                             </Text>
                         </View>
                         <View style = {{flex : 1}}>
