@@ -18,8 +18,7 @@ export default class Home extends React.Component {
             {/* view_1 */}
             <FlatList 
             data={List}
-            renderItem={({item}) =><CustomItem xxx={item}
-            />}
+            renderItem={({item}) =><CustomItem xxx={item}/> } keyExtractor ={(xxx)=>xxx.ten_goi}
 
             />
       </ScrollView>
