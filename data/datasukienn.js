@@ -13,7 +13,7 @@ var datassukien = [
         header : "Chương trình cà phê sức khỏe chủ đê Hiếu đúng và Sống khỏe với Đái tháo đường ",
         text : "Tặng miễn phí gói tầm soát tiểu đường cho khách tham dự chương trình cà phể sức khỏe cùng THs BS Diệp Thị Thanh Bình" 
     },
-
+    
 ]
 
 export default datassukien;

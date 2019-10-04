@@ -107,7 +107,9 @@ export default class Trangchu extends Component {
                 <FlatList horizontal = {true} data ={datasukien} renderItem = {({item})=><Itemsukien xxx={item}></Itemsukien>} keyExtractor ={(xxx)=>xxx.header}>
 
                 </FlatList>
-                header
+                <Text style = {{fontSize : 18, fontWeight: 'bold', marginLeft : 10, marginTop : 20}}>
+                    {"Dịch vụ phổ biến"}
+                </Text>
             </ScrollView>
         )
     }
@@ -116,7 +118,7 @@ export default class Trangchu extends Component {
 const styles = StyleSheet.create({
     container : {
         flex : 1,
-        backgroundColor : "#fcfafa"
+        backgroundColor : "#f5eded"
 
     },
     dichvu:{
