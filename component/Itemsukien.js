@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Image, Text, TouchableOpacity, Dimensions, ImageBackground } from 'react-native'
 import { Avatar, Icon } from 'react-native-elements'
-import { thisExpression } from '@babel/types'
 
 export default class Itemsukien extends Component {
     constructor(props){
