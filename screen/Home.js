@@ -11,9 +11,9 @@ export default class Home extends React.Component {
     return (
       <ScrollView style = {styles.viewx}>
             <View style={styles.view_1}>
-                <Text style={{color:'grey',marginRight:5}}>Dich vu tai</Text>
+                <Text style={{color:'grey',marginRight:5}}>{"Dịch vụ tại"}</Text>
                 <Icon name='map-marker' type='font-awesome' color='blue' size={16}></Icon>
-                <Text style={{marginLeft:5}}>Ha Noi</Text>
+                <Text style={{marginLeft:5}}>{"Hà Nội"}</Text>
             </View>
             {/* view_1 */}
             <FlatList 

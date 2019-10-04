@@ -14,7 +14,7 @@ const stack = createStackNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: {
-      title:'Xet nghiem tai nha'
+      title:'Xét nghiệm tại nhà'
       // header:null
     }
   },

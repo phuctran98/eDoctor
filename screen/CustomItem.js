@@ -10,7 +10,7 @@ class CustomItem extends Component {
             {/* view0 */}
                     <View style ={styles.view1}>
                         <View style={{flex:25}}>
-                            <Image style={{width:70,height:60,borderRadius:5,marginLeft:15,marginTop:15}} source={require('../data/avatar1.jpg')}></Image>
+                            <Image style={{width:70,height:60,borderRadius:5,marginLeft:15,marginTop:15}} source={require('../avatar/doctor1.jpg')}></Image>
                         </View>
                         {/* image */}
                         <View style={{flex:65,borderTopEndRadius:5,marginTop:15}}>
