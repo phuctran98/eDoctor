@@ -4,6 +4,7 @@ import { Avatar } from 'react-native-elements'
 import { FlatList } from 'react-native-gesture-handler'
 import datasukien from '../data/datasukienn'
 import Itemsukien from '../component/Itemsukien'
+// import Home from './Home'
 
 export default class Trangchu extends Component {
     render() {
@@ -22,7 +23,7 @@ export default class Trangchu extends Component {
                                 xét nghiệm
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style = {styles.viewChill}>
+                        <TouchableOpacity style = {styles.viewChill} onPress={() => this.props.navigation.navigate('Home')}>
                             <Image source = {require('../avatar/813850_people_512x512.png')} style={{ height: 35, width: 35, borderRadius: 10 }}>
                                 </Image>
                                 <Text style = {styles.text}>

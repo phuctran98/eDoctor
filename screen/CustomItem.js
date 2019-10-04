@@ -1,0 +1,86 @@
+import React, { Component } from 'react';
+import { Text, Image, StyleSheet, View, Alert,TouchableOpacity } from 'react-native';
+import { Icon } from 'react-native-elements';
+
+class CustomItem extends Component {
+  render() {
+    return (
+        
+            <View style = {styles.view0}>
+            {/* view0 */}
+                    <View style ={styles.view1}>
+                        <View style={{flex:25}}>
+                            <Image style={{width:70,height:60,borderRadius:5,marginLeft:15,marginTop:15}} source={require('../data/avatar1.jpg')}></Image>
+                        </View>
+                        {/* image */}
+                        <View style={{flex:65,borderTopEndRadius:5,marginTop:15}}>
+                            <Text style={{fontSize:14,fontWeight:'bold'}}>{this.props.xxx.ten_goi}</Text>
+                            <Text style={{fontSize:14,color:'blue'}}>{this.props.xxx.gia_tien}</Text>
+                        </View>
+                    </View>
+                    {/* view1 */}         
+                    <View style={styles.view2}>
+                         <Text style={{marginLeft:15,marginTop:10,marginBottom:5,width:'80%'}}>{this.props.xxx.mo_ta}</Text>  
+                    </View>
+                    {/* view2 */}
+
+                    <View style={styles.view3}>
+                        <View style={{flex:50,flexDirection:'row',marginTop:10,marginLeft:15}}>
+                            <Icon name='map-marker' type='font-awesome' color='blue' size={16}></Icon>
+                            <Text style={{fontSize:14,marginLeft:5}}>{this.props.xxx.doi_tuong}</Text>
+                        </View>
+                        {/* image */}
+                        <View style={{flex:50,flexDirection:'row',marginLeft:15,marginTop:10}}>
+                            <Icon name='map-marker' type='font-awesome' color='blue' size={16}></Icon>
+                            <Text style={{fontSize:14,marginLeft:5}}>{this.props.xxx.so_xn}</Text>
+                        </View>
+                    </View>
+                    {/* view3 */}
+            </View>
+            // view0
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  
+  view0: {
+    height:250,
+    width:350,
+    paddingBottom:20,
+    borderRadius:5,
+    marginLeft:17,
+    marginTop:15,
+    marginBottom:10,
+    backgroundColor:'white',
+
+  },
+
+  view1:{
+    width:350,
+    height: 95,
+    flexDirection:'row',
+    borderBottomWidth:0.3,
+    borderTopStartRadius:5,
+    borderTopEndRadius:5,
+    // backgroundColor:'tomato'
+  },
+
+  view2:{
+    height:105,
+    flexDirection:'row',
+    borderBottomWidth:0.3,
+    // backgroundColor:'green',
+
+  },
+  view3:{
+    height:50,
+    flexDirection:'row',
+    borderBottomStartRadius:5,
+    borderBottomEndRadius:5,
+    // backgroundColor:'violet',
+
+  },
+ 
+});
+export default CustomItem;
