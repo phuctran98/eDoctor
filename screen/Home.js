@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet,FlatList,Text,View} from 'react-native';
-import List from '../data/List'
+import List from '../data/dataxntn'
 import CustomItem from './CustomItem'
 import { Icon } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';

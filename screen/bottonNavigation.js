@@ -12,11 +12,13 @@ const TabNavigation = createBottomTabNavigator({
     screen: Trangchu,
     navigationOptions: {
       title : 'Trang chủ',
-      tabBarLabel: ({ tintColor }) => { return <Text style={{ color: "#94908f", textAlign:'center',fontSize : 12 }}>Trang chủ</Text> },
+      tabBarLabel: ({ tintColor }) => { return <Text style={{ color: "blue", textAlign:'center',fontSize : 12 }}>Trang chủ</Text> },
       tabBarIcon: (params) => {
-        return <Icon color={"#94908f"} type='font-awesome' name="home" size={18} />
+        return <Icon color={"blue"} type='font-awesome' name="home" size={22} />
       }
-    }
+    },
+    tabBarOptions:{activeTintColor:'blue'},
+
   },
   Lichhen: {  
     screen: Lichhen,
@@ -33,31 +35,31 @@ const TabNavigation = createBottomTabNavigator({
       headerTitleStyle: {
         fontWeight: 'bold',
       },
-    }
+    },
+    tabBarOptions:{activeTintColor:'blue'},
   },
   Congdong: {  
     screen: Congdong,
     navigationOptions: {
-      // title : 'Cộng đồng',   
+      // title : 'Cộng đồng',
       tabBarLabel: ({ tintColor }) => { return <Text style={{ color: "#94908f", textAlign:'center',fontSize : 12 }}>Cộng đồng</Text> },
       tabBarIcon: (params) => {
         return <Icon color={"#94908f"} type='font-awesome' name="users" size={18} />
       }, 
-    }
+    },
   },
   Hoso: {  
     screen: Hoso,
     navigationOptions: {
-      title : 'Hồ sơ',   
+      title : 'Hồ sơ',
       tabBarLabel: ({ tintColor }) => { return <Text style={{ color: "#94908f", textAlign:'center',fontSize : 12}}>Hồ sơ</Text> },
       tabBarIcon: (params) => {
         return <Icon color={"#94908f"} type='font-awesome' name="user-md" size={18} />
       }, 
-    }
+    },
   },
 },
 {
   initialRouteName: 'Trangchu',
-
 })
 export default TabNavigation

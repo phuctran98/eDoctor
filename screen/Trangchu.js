@@ -17,30 +17,30 @@ export default class Trangchu extends Component {
                         <TouchableOpacity style = {styles.viewChill}>
                             <Image source = {require('../avatar/813850_people_512x512.png')} style={{ height: 35, width: 35, borderRadius: 10 }}/>
                             <Text style = {styles.text}>
-                                Khám và
+                                {"Khám và"}
                             </Text>
                             <Text style = {styles.text2}>
-                                xét nghiệm
+                                {"xét nghiệm"}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style = {styles.viewChill} onPress={() => this.props.navigation.navigate('Home')}>
                             <Image source = {require('../avatar/813850_people_512x512.png')} style={{ height: 35, width: 35, borderRadius: 10 }}>
                                 </Image>
                                 <Text style = {styles.text}>
-                                Xét nghiệm
+                                {"Xét nghiệm"}
                             </Text>
                             <Text style = {styles.text2}>
-                                tại nhà
+                                {"tại nhà"}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style = {styles.viewChill}>
                             <Image source = {require('../avatar/813850_people_512x512.png')} style={{ height: 35, width: 35, borderRadius: 10 }}>
                                 </Image>
                                 <Text style = {styles.text}>
-                                Xét nghiệm
+                                {"Xét nghiệm"}
                             </Text>
                             <Text style = {styles.text2}>
-                                di truyền
+                                {"di truyền"}
                             </Text >
                         </TouchableOpacity>
                     
@@ -79,7 +79,7 @@ export default class Trangchu extends Component {
                     </View>
                     <View style = {{flexDirection : 'row', marginTop : 5}}>
                         {/* 3 */}
-                        <TouchableOpacity style = {styles.viewChill}>
+                        <TouchableOpacity style = {{flex : 1, alignItems : 'center',  justifyContent : 'center',marginBottom:14,marginLeft:5}}>
                             <Image source = {require('../avatar/813850_people_512x512.png')} style={{ height: 35, width: 35, borderRadius: 10 }}/>
                             <Text style = {styles.text}>
                             {"Hỏi Bác sĩ"}
@@ -119,7 +119,7 @@ export default class Trangchu extends Component {
 const styles = StyleSheet.create({
     container : {
         flex : 1,
-        backgroundColor : "#f5eded"
+        backgroundColor : "#e9f7f1"
 
     },
     dichvu:{

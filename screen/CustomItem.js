@@ -15,7 +15,7 @@ class CustomItem extends Component {
                         {/* image */}
                         <View style={{flex:65,borderTopEndRadius:5,marginTop:15}}>
                             <Text style={{fontSize:14,fontWeight:'bold'}}>{this.props.xxx.ten_goi}</Text>
-                            <Text style={{fontSize:14,color:'blue'}}>{this.props.xxx.gia_tien}</Text>
+                            <Text style={{fontSize:14,color:'blue',fontWeight:'bold'}}>{this.props.xxx.gia_tien}</Text>
                         </View>
                     </View>
                     {/* view1 */}         
@@ -26,12 +26,12 @@ class CustomItem extends Component {
 
                     <View style={styles.view3}>
                         <View style={{flex:50,flexDirection:'row',marginTop:10,marginLeft:15}}>
-                            <Icon name='map-marker' type='font-awesome' color='blue' size={16}></Icon>
+                            <Icon name='bullseye' type='font-awesome' color='blue' size={15} marginTop={2}></Icon>
                             <Text style={{fontSize:14,marginLeft:5}}>{this.props.xxx.doi_tuong}</Text>
                         </View>
                         {/* image */}
                         <View style={{flex:50,flexDirection:'row',marginLeft:15,marginTop:10}}>
-                            <Icon name='map-marker' type='font-awesome' color='blue' size={16}></Icon>
+                            <Icon name='thermometer' type='font-awesome' color='blue' size={16}></Icon>
                             <Text style={{fontSize:14,marginLeft:5}}>{this.props.xxx.so_xn}</Text>
                         </View>
                     </View>
