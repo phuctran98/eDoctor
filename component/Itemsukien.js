@@ -40,5 +40,4 @@ const styles =StyleSheet.create({
         marginLeft : 10,
         width : screenWidth - 50}
     },
-
-})
+)
