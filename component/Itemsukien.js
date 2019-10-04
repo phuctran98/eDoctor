@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Image, Text, TouchableOpacity, Dimensions, ImageBackground } from 'react-native'
 import { Avatar, Icon } from 'react-native-elements'
-import { thisExpression } from '@babel/types'
 
 export default class Itemsukien extends Component {
     constructor(props){
@@ -15,15 +14,7 @@ export default class Itemsukien extends Component {
     render() {
         let screenWidth = Dimensions.get('window').width;
         return (          
-            <TouchableOpacity style = {{
-                flex : 1,       
-                borderRadius : 15,
-                // borderWidth : 1,
-                // borderColor : "black",
-                backgroundColor : "white",
-                marginTop : 15,
-                marginLeft : 10,
-                width : screenWidth - 50}}>
+            <TouchableOpacity style = {styles.container}>
                 <View style = {{flex : 30 }} >
                         {this.props.xxx.image}
                 </View>
@@ -42,11 +33,12 @@ export default class Itemsukien extends Component {
 }
 const styles =StyleSheet.create({
     container : {
-        borderRadius : 50,
-        // borderWidth : 1,
-        // borderColor : "black",
-        marginTop : 20,
+        flex : 1,       
+        borderRadius : 15,
+        backgroundColor : "white",
+        marginTop : 15,
         marginLeft : 10,
+        //width : screenWidth - 50
+    }
     },
-
-})
+)
