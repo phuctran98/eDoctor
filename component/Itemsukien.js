@@ -20,6 +20,7 @@ export default class Itemsukien extends Component {
                 borderRadius : 15,
                 // borderWidth : 1,
                 // borderColor : "black",
+                backgroundColor : "white",
                 marginTop : 15,
                 marginLeft : 10,
                 width : screenWidth - 50}}>
