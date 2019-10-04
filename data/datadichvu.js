@@ -1,8 +1,4 @@
-import {Image,Dimensions} from 'react-native'
-import React,{Component} from 'react'
-
-let screenWidth = Dimensions.get('window').width;
-var datasukien = [
+var datadichvu =[
     {
         image : <Image source = {require('../avatar/bannerungthu.jpg')} style = {{ width : screenWidth - 20 , height : screenWidth * 666/1440 - 20}}/>,
         header : "Chương trình cà phê sức khỏe chủ đê Hiếu đúng và Sống khỏe với Đái tháo đường ",
@@ -18,7 +14,5 @@ var datasukien = [
         header : "Việt Nam có 20 triệu người mang virus viên gan B và C",
         text : "Ngay lúc này hãy khám gan ngay nếu có thể vì bạn và gia đình bạn cũng có thể bị bệnh Gan" 
     },
-    
 ]
-
-export default datasukien;
+export default datadichvu;

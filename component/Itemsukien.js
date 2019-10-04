@@ -38,6 +38,7 @@ const styles =StyleSheet.create({
         backgroundColor : "white",
         marginTop : 15,
         marginLeft : 10,
-        width : screenWidth - 50}
+        //width : screenWidth - 50
+    }
     },
 )
