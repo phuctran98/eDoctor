@@ -5,7 +5,7 @@ import CustomItem from './CustomItem'
 import { Icon } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 
-export default class Home extends React.Component {
+export default class XNTN extends React.Component {
 
   render() {
     return (

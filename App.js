@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TabNavigation from './screen/bottonNavigation'
-import HomeScreen from './screen/Home'
+import XNTNScreen from './screen/XNTN'
 import { createAppContainer } from 'react-navigation'; 
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -11,8 +11,8 @@ const stack = createStackNavigator({
       header:null
     }
   },
-  Home: {
-    screen: HomeScreen,
+  XNTN: {
+    screen: XNTNScreen,
     navigationOptions: {
       title:'Xét nghiệm tại nhà'
       // header:null
