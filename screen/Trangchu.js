@@ -102,7 +102,7 @@ export default class Trangchu extends Component {
                     </View>
                 </View>
                 <Text style = {{fontSize : 18, fontWeight: 'bold', marginLeft : 10, marginTop : 20}}>
-                    Sự kiện nổi bật
+                    {"Sự kiện nổi bật"}
                 </Text>
                 <FlatList horizontal = {true} data ={datasukien} renderItem = {({item})=><Itemsukien xxx={item}></Itemsukien>} keyExtractor ={(xxx)=>xxx.header}>
 

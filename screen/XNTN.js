@@ -1,15 +1,15 @@
 import React from 'react';
-import {StyleSheet,FlatList,Text,View} from 'react-native';
-import List from '../data/dataxntn'
-import CustomItem from './CustomItem'
+import {StyleSheet,FlatList,Text,View,TouchableOpacity} from 'react-native';
+import dataxntn from '../data/dataxntn'
+import ItemXntn from '../component/ItemXntn'
 import { Icon } from 'react-native-elements';
-import { ScrollView } from 'react-native-gesture-handler';
+// import { ScrollView } from 'react-native-gesture-handler';
 
 export default class XNTN extends React.Component {
 
   render() {
     return (
-      <ScrollView style = {styles.viewx}>
+      <TouchableOpacity style = {styles.viewx} onPress={() => this.props.navigation.navigate('GoiXntq')}>
             <View style={styles.view_1}>
                 <Text style={{color:'grey',marginRight:5}}>{"Dịch vụ tại"}</Text>
                 <Icon name='map-marker' type='font-awesome' color='blue' size={16}></Icon>
@@ -17,11 +17,11 @@ export default class XNTN extends React.Component {
             </View>
             {/* view_1 */}
             <FlatList 
-            data={List}
-            renderItem={({item}) =><CustomItem xxx={item}/> } keyExtractor ={(xxx)=>xxx.ten_goi}
+            data={dataxntn}
+            renderItem={({item}) =><ItemXntn xxx={item}/> } keyExtractor ={(xxx)=>xxx.key}
 
             />
-      </ScrollView>
+      </TouchableOpacity>
       
     );
   }

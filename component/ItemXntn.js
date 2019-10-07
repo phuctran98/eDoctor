@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, Image, StyleSheet, View, Alert,TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-class CustomItem extends Component {
+class ItemXntn extends Component {
   render() {
     return (
         
@@ -45,8 +45,6 @@ class CustomItem extends Component {
 const styles = StyleSheet.create({
   
   view0: {
-    // height:250,
-    // width:350,
     flex : 1,
     paddingBottom:20,
     borderRadius:5,
@@ -61,8 +59,6 @@ const styles = StyleSheet.create({
   },
 
   view1:{
-    // width:350,
-    // height: 95,
     flex: 40,
     flexDirection:'row',
     borderBottomWidth:0.3,
@@ -72,7 +68,6 @@ const styles = StyleSheet.create({
   },
 
   view2:{
-    // height:105,
     flex : 40,
     flexDirection:'row',
     borderBottomWidth:0.3,
@@ -80,7 +75,6 @@ const styles = StyleSheet.create({
 
   },
   view3:{
-    // height:50,
     flex : 20,
     flexDirection:'row',
     borderBottomStartRadius:5,
@@ -90,4 +84,4 @@ const styles = StyleSheet.create({
   },
  
 });
-export default CustomItem;
+export default ItemXntn;

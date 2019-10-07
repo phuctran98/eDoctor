@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TabNavigation from './screen/bottonNavigation'
 import XNTNScreen from './screen/XNTN'
+import GoiXntqScreen from './screen/GoiXntq'
 import { createAppContainer } from 'react-navigation'; 
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -18,12 +19,12 @@ const stack = createStackNavigator({
       // header:null
     }
   },
-  // Trangchu: {
-  //   screen: TrangchuScreen,
-  //   navigationOptions: {
-  //     header:null
-  //   }
-  // },
+  GoiXntq: {
+    screen: GoiXntqScreen,
+    navigationOptions: {
+      title:'Gói xét nghiệm tổng quát'
+    }
+  },
   },
   {
     initialRouteName: 'TabNavigation',
