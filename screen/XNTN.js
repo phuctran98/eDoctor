@@ -44,15 +44,8 @@ export default class XNTN extends React.Component {
             </View>
             {/* view_1 */}
             <FlatList 
-
-            // data={List}
-            // data = {List}
-            // renderItem={({item}) =><CustomItem xxx={item}/> } keyExtractor ={(xxx)=>xxx.ten_goi}
-
             data={dataxntn}
             renderItem={({item}) =><ItemXntn xxx={item} onPressDetail={this.onPressDetail.bind(this)} /> } keyExtractor ={(xxx)=>xxx.key}
-
-
             />
       </View>
       

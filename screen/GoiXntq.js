@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet,FlatList,Text,View, ImageBackground} from 'react-native';
+import {StyleSheet,FlatList,Text,View, Image} from 'react-native';
 import datagoixntq from '../data/datagoixntq'
 import { Icon } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -8,7 +8,7 @@ export default class GoiXntq extends React.Component {
   render() {
     return (
       <ScrollView style = {styles.viewx}>
-          {/* <ImageBackground source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '100%'}}> */}
+          <Image source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '30'}}></Image>
             <View style = {styles.view0}>
             {/* view0 */}
                     <View style ={styles.view1}>
@@ -60,7 +60,7 @@ export default class GoiXntq extends React.Component {
                     {/* view1 */}         
                     
             </View>
-            {/* </ImageBackground> */}
+            {/* </Image> */}
       </ScrollView> 
       
     );
