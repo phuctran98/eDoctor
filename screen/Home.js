@@ -4,9 +4,24 @@ import List from '../data/dataxntn'
 import CustomItem from './CustomItem'
 import { Icon } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
-
+import {getSNTN} from '../networking/Server'
 export default class Home extends React.Component {
-
+  constructor(props){
+    super(props);
+    this.state = ({
+      datafromServer : []
+    })
+  }
+  // componentDidMount(){
+  //   this.refresDataFromServer();
+  // }
+  // refresDataFromServer=()=>{
+  //   getSNTN().then((data)=>{
+  //     this.setState({datafromServer : data})
+  //   }).catch((error)=>{
+  //     this.setState({datafromServer:[]})
+  //   });
+  // }
   render() {
     return (
       <ScrollView style = {styles.viewx}>
@@ -17,9 +32,9 @@ export default class Home extends React.Component {
             </View>
             {/* view_1 */}
             <FlatList 
-            data={List}
+            // data={List}
+            data = {List}
             renderItem={({item}) =><CustomItem xxx={item}/> } keyExtractor ={(xxx)=>xxx.ten_goi}
-
             />
       </ScrollView>
       
