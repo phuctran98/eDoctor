@@ -5,7 +5,7 @@ import { Icon } from 'react-native-elements';
 class ItemXntn extends Component {
   render() {
     return (
-        
+        <TouchableOpacity onPress={() => this.props.onPressDetail()}>
             <View style = {styles.view0}>
             {/* view0 */}
                     <View style ={styles.view1}>
@@ -37,7 +37,7 @@ class ItemXntn extends Component {
                     </View>
                     {/* view3 */}
             </View>
-            // view0
+        </TouchableOpacity>
     );
   }
 }
