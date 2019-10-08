@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import TabNavigation from './screen/bottonNavigation'
-import HomeScreen from './screen/Home'
+import XNTNScreen from './screen/XNTN'
+import ItemXntnScreen from './component/ItemXntn'
+import GoiXntqScreen from './screen/GoiXntq'
 import { createAppContainer } from 'react-navigation'; 
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -11,19 +13,26 @@ const stack = createStackNavigator({
       header:null
     }
   },
-  Home: {
-    screen: HomeScreen,
+  XNTN: {
+    screen: XNTNScreen,
     navigationOptions: {
       title:'Xét nghiệm tại nhà'
       // header:null
     }
   },
-  // Trangchu: {
-  //   screen: TrangchuScreen,
-  //   navigationOptions: {
-  //     header:null
-  //   }
-  // },
+  ItemXntn: {
+    screen: ItemXntnScreen,
+    navigationOptions: {
+      title:'Xét nghiệm tại nhà'
+      // header:null
+    }
+  },
+  GoiXntq: {
+    screen: GoiXntqScreen,
+    navigationOptions: {
+      title:'Gói xét nghiệm tổng quát'
+    }
+  },
   },
   {
     initialRouteName: 'TabNavigation',
