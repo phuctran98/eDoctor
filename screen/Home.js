@@ -1,20 +1,17 @@
 import React from 'react';
 import {StyleSheet,FlatList,Text,View} from 'react-native';
-import dataxntn from '../data/dataxntn'
-import ItemXntn from '../component/ItemXntn'
+import List from '../data/dataxntn'
+import CustomItem from './CustomItem'
 import { Icon } from 'react-native-elements';
-
-import {getSNTN} from '../networking/Server'
 import { ScrollView } from 'react-native-gesture-handler';
-
-
-// export default class Home extends React.Component {
-//   constructor(props){
-//     super(props);
-//     this.state = ({
-//       datafromServer : []
-//     })
-//   }
+import {getSNTN} from '../networking/Server'
+export default class Home extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = ({
+      datafromServer : []
+    })
+  }
   // componentDidMount(){
   //   this.refresDataFromServer();
   // }
@@ -25,18 +22,9 @@ import { ScrollView } from 'react-native-gesture-handler';
   //     this.setState({datafromServer:[]})
   //   });
   // }
-
-export default class XNTN extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onPressDetail = this.onPressDetail.bind(this);
-  }
-  onPressDetail(){
-    this.props.navigation.navigate('GoiXntq')
-  }
   render() {
     return (
-      <View style = {styles.viewx} >
+      <ScrollView style = {styles.viewx}>
             <View style={styles.view_1}>
                 <Text style={{color:'grey',marginRight:5}}>{"Dịch vụ tại"}</Text>
                 <Icon name='map-marker' type='font-awesome' color='blue' size={16}></Icon>
@@ -44,17 +32,11 @@ export default class XNTN extends React.Component {
             </View>
             {/* view_1 */}
             <FlatList 
-
             // data={List}
-            // data = {List}
-            // renderItem={({item}) =><CustomItem xxx={item}/> } keyExtractor ={(xxx)=>xxx.ten_goi}
-
-            data={dataxntn}
-            renderItem={({item}) =><ItemXntn xxx={item} onPressDetail={this.onPressDetail.bind(this)} /> } keyExtractor ={(xxx)=>xxx.key}
-
-
+            data = {List}
+            renderItem={({item}) =><CustomItem xxx={item}/> } keyExtractor ={(xxx)=>xxx.ten_goi}
             />
-      </View>
+      </ScrollView>
       
     );
   }
