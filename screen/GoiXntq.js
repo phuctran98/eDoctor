@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet,FlatList,Text,View} from 'react-native';
+import {StyleSheet,FlatList,Text,View,TouchableOpacity} from 'react-native';
 import datagoixntq from '../data/datagoixntq'
 import datagoixntq2 from '../data/datagoixntq2'
 import ItemGoixntq from '../component/ItemGoixntq'
@@ -16,7 +16,8 @@ export default class XNTN extends React.Component {
   }
   render() {
     return (
-      <ScrollView style = {styles.viewx}>
+  <View style={{flex: 1}}>
+        <ScrollView style = {styles.viewx}>
       {/* <ImageBackground source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '100%'}}> */}
         <View style = {styles.view0}>
         {/* view0 */}
@@ -69,7 +70,26 @@ export default class XNTN extends React.Component {
             />      
         </View>
         {/* </ImageBackground> */}
-  </ScrollView> 
+      </ScrollView>
+          <View style={{height:70,flexDirection:'column',margin:10}}>
+              <View style={{flex:30,flexDirection:'row',marginLeft:10}}>
+                <Text style={{width:'80%'}}>Giá dịch vụ</Text>
+                <Text style={{width:'20%',fontWeight:'bold',fontSize:16}}>850.000đ</Text>
+              </View>
+              <View style={{flex:70,flexDirection:'row'}}>
+          <TouchableOpacity style={styles.button}>
+            <Text
+              onPress={() => {
+                this.onPressBook();
+              }}
+              style={{fontSize: 14, fontWeight: 'bold', color: 'white', textAlign: 'center', paddingTop:4,}}>
+              Thêm vào giỏ hàng và đặt lịch
+            </Text>
+          </TouchableOpacity>
+        </View>
+          </View>
+  </View>
+       
             
       
     );
@@ -113,5 +133,13 @@ const styles = StyleSheet.create({
     flexDirection:'column',
     marginTop:10,
     // backgroundColor:'green'
+  },
+  button: {
+    margin: 10,
+    width: '95%',
+    borderRadius: 5,
+    backgroundColor: '#23c4cc',
+    height: 40,
+    paddingTop: 5,
   },
 });
