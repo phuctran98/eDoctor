@@ -16,7 +16,7 @@ export default class GoiXntqScreen extends React.Component {
   render() {
     return (
       <ScrollView style = {styles.viewx}>
-          <Image source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '30'}}></Image>
+          <Image source={require('../avatar/doctor.jpg')} style={{width: '100%', height: 100}}></Image>
             <View style = {styles.view0}>
             {/* view0 */}
                     <View style ={styles.view1}>
@@ -53,10 +53,10 @@ export default class GoiXntqScreen extends React.Component {
                         </View>
                     </View>
             </View>
-            {/* <FlatList 
+            <FlatList 
             data={datagoixntq}
             renderItem={({item}) =><ItemGoixntq yyy={item} onPressBook={this.onPressBook.bind(this)} /> }
-            /> */}
+            />
       </ScrollView> 
 
 
@@ -79,4 +79,5 @@ const styles = StyleSheet.create({
     borderBottomWidth:0.3,
     backgroundColor:'white',
   },
+
 });

@@ -30,7 +30,8 @@ const stack = createStackNavigator({
   GoiXntq: {
     screen: GoiXntqScreen,
     navigationOptions: {
-      title:'Gói xét nghiệm tổng quát'
+      title:'Gói xét nghiệm tổng quát',
+      header:null
     }
   },
   },

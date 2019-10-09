@@ -4,9 +4,6 @@ import dataxntn from '../data/dataxntn'
 import ItemXntn from '../component/ItemXntn'
 import { Icon } from 'react-native-elements';
 
-import {getSNTN} from '../networking/Server'
-import { ScrollView } from 'react-native-gesture-handler';
-
 
 // export default class Home extends React.Component {
 //   constructor(props){

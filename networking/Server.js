@@ -1,4 +1,4 @@
-const apiSNTN = 'http://localhost:3000'
+const apiSNTN = 'https://jsonplaceholder.typicode.com/comments'
 
 async function getSNTN(){
     try{
