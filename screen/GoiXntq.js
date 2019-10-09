@@ -19,6 +19,9 @@ export default class XNTN extends React.Component {
   <View style={{flex: 1}}>
         <ScrollView style = {styles.viewx}>
       <ImageBackground source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '45%'}}>
+                    <TouchableOpacity style={{flex:50,flexDirection:'row',marginTop:10,marginLeft:15, alignItems : "center"}} onPress={() => {this.props.navigation.navigate('XNTN')}}>
+                        <Icon name='arrow-left' type='font-awesome' color='white' size={18}></Icon>
+                    </TouchableOpacity>
         <View style = {styles.view0}>
         {/* view0 */}
                 <View style ={styles.view1}>
@@ -79,9 +82,7 @@ export default class XNTN extends React.Component {
               <View style={{flex:70,flexDirection:'row'}}>
           <TouchableOpacity style={styles.button}>
             <Text
-              onPress={() => {
-                this.onPressBook();
-              }}
+              onPress={() => {this.onPressBook()}}
               style={{fontSize: 14, fontWeight: 'bold', color: 'white', textAlign: 'center', paddingTop:4,}}>
               Thêm vào giỏ hàng và đặt lịch
             </Text>
