@@ -3,7 +3,9 @@ import {View,Text, ScrollView, StyleSheet, Image, TouchableOpacity} from 'react-
 import { Avatar } from 'react-native-elements'
 import { FlatList } from 'react-native-gesture-handler'
 import datasukien from '../data/datasukienn'
+import datadichvuphobien from '../data/dataDichvuphobien'
 import Itemsukien from '../component/Itemsukien'
+import Itemdichvuphobien from '../component/Itemdichvuphobien'
 
 export default class Trangchu extends Component {
     render() {
@@ -110,6 +112,10 @@ export default class Trangchu extends Component {
                 <Text style = {{fontSize : 18, fontWeight: 'bold', marginLeft : 10, marginTop : 20}}>
                     {"Dịch vụ phổ biến"}
                 </Text>
+
+                <FlatList horizontal = {true} data ={datadichvuphobien} renderItem = {({item})=><Itemdichvuphobien xxx={item}></Itemdichvuphobien>} keyExtractor ={(xxx)=>xxx.header}>
+
+                </FlatList>
             </ScrollView>
         )
     }

@@ -12,12 +12,13 @@ const TabNavigation = createBottomTabNavigator({
     screen: Trangchu,
     navigationOptions: {
       title : 'Trang chủ',
-      tabBarLabel: ({ tintColor }) => { return <Text style={{ color: "blue", textAlign:'center',fontSize : 12 }}>Trang chủ</Text> },
+      tabBarLabel: ({ tintColor }) => { return <Text style={{ color: "#94908f", textAlign:'center',fontSize : 12 }}>Trang chủ</Text> },
       tabBarIcon: (params) => {
-        return <Icon color={"blue"} type='font-awesome' name="home" size={22} />
+        return <Icon color={"#94908f"} type='font-awesome' name="home" size={18} />
       }
     },
-    tabBarOptions:{activeTintColor:'blue'},
+    
+    // tabBarOptions:{activeTintColor:'blue'},
 
   },
   Lichhen: {  
@@ -61,5 +62,17 @@ const TabNavigation = createBottomTabNavigator({
 },
 {
   initialRouteName: 'Trangchu',
-})
+},
+{
+  tabBarOptions: {
+  activeTintColor: '#e91e63',
+  labelStyle: {
+    fontSize: 12,
+  },
+  style: {
+    backgroundColor: 'blue',
+  },
+}}
+
+)
 export default TabNavigation

@@ -11,6 +11,9 @@ const stack = createStackNavigator({
     screen: TabNavigation,
     navigationOptions: {
       header:null
+    },
+    tabBarOptions :{
+      activeTintColor : 'red'
     }
   },
   XNTN: {

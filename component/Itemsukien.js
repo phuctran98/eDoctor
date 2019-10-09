@@ -6,9 +6,9 @@ export default class Itemsukien extends Component {
     constructor(props){
         super(props)
         this.state ={
-            image :"",
-            header : "",
-            text : "" 
+            // image :"",
+            // header : "",
+            // text : "" 
         }
     }
     render() {
@@ -38,7 +38,6 @@ const styles =StyleSheet.create({
         backgroundColor : "white",
         marginTop : 15,
         marginLeft : 10,
-        //width : screenWidth - 50
     }
     },
 )
