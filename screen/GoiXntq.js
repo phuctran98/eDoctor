@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet,FlatList,Text,View,TouchableOpacity} from 'react-native';
+import {StyleSheet,FlatList,Text,View,TouchableOpacity,ImageBackground} from 'react-native';
 import datagoixntq from '../data/datagoixntq'
 import datagoixntq2 from '../data/datagoixntq2'
 import ItemGoixntq from '../component/ItemGoixntq'
@@ -18,7 +18,7 @@ export default class XNTN extends React.Component {
     return (
   <View style={{flex: 1}}>
         <ScrollView style = {styles.viewx}>
-      {/* <ImageBackground source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '100%'}}> */}
+      <ImageBackground source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '45%'}}>
         <View style = {styles.view0}>
         {/* view0 */}
                 <View style ={styles.view1}>
@@ -69,7 +69,7 @@ export default class XNTN extends React.Component {
 
             />      
         </View>
-        {/* </ImageBackground> */}
+        </ImageBackground>
       </ScrollView>
           <View style={{height:70,flexDirection:'column',margin:10}}>
               <View style={{flex:30,flexDirection:'row',marginLeft:10}}>
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     paddingBottom:20,
     borderRadius:5,
     marginLeft:17,
-    marginTop:65,
+    marginTop:200,
     marginRight : 17,
     marginBottom:10,
     backgroundColor:'white',
