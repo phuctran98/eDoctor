@@ -3,6 +3,7 @@ import TabNavigation from './screen/bottonNavigation'
 import XNTNScreen from './screen/XNTN'
 import ItemXntnScreen from './component/ItemXntn'
 import GoiXntqScreen from './screen/GoiXntq'
+import datLichHenScreen from './screen/datLichHen'
 import { createAppContainer } from 'react-navigation'; 
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -37,7 +38,14 @@ const stack = createStackNavigator({
       header:null
     }
   },
+  datLichHen: {
+    screen: datLichHenScreen,
+    navigationOptions: {
+      title:'Đặt lịch hẹn'
+    }
   },
+  },
+  
   {
     initialRouteName: 'TabNavigation',
   },

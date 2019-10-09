@@ -1,41 +1,24 @@
 import React from 'react';
-<<<<<<< HEAD
-import {StyleSheet,FlatList,Text,View, Image} from 'react-native';
-=======
-import {StyleSheet,FlatList,Text,View,TouchableOpacity} from 'react-native';
->>>>>>> 710b3eb1096e46a66890dfccd6658bdc3d17c2ed
+import {StyleSheet,FlatList,Text,View,TouchableOpacity,ImageBackground} from 'react-native';
 import datagoixntq from '../data/datagoixntq'
+import datagoixntq2 from '../data/datagoixntq2'
 import ItemGoixntq from '../component/ItemGoixntq'
 import { Icon } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 
-export default class GoiXntqScreen extends React.Component {
+export default class XNTN extends React.Component {
   constructor(props) {
     super(props);
     this.onPressBook = this.onPressBook.bind(this);
   }
   onPressBook(){
-    this.props.navigation.navigate('GoiXntq')
+    this.props.navigation.navigate('datLichHen')
   }
   render() {
     return (
-<<<<<<< HEAD
-      <ScrollView style = {styles.viewx}>
-          <Image source={require('../avatar/doctor.jpg')} style={{width: '100%', height: 100}}></Image>
-            <View style = {styles.view0}>
-            {/* view0 */}
-                    <View style ={styles.view1}>
-                        <View style={{flex:65,borderTopEndRadius:5,marginLeft:15}}>
-                            <Text style={{fontSize:18,fontWeight:'bold'}}>Gói xét nghiệm tổng quát</Text>
-                        </View>
-                        <View style={{flexDirection:'row',marginLeft:15}}>
-                            <Text style={{fontSize:14}}>Khu vực:</Text>
-                            <Text style={{fontSize:14,marginLeft:10}}>Hà Nội</Text>
-                        </View>
-=======
   <View style={{flex: 1}}>
         <ScrollView style = {styles.viewx}>
-      {/* <ImageBackground source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '100%'}}> */}
+      <ImageBackground source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '45%'}}>
         <View style = {styles.view0}>
         {/* view0 */}
                 <View style ={styles.view1}>
@@ -45,46 +28,48 @@ export default class GoiXntqScreen extends React.Component {
                     <View style={{flexDirection:'row',marginLeft:15}}>
                         <Text style={{fontSize:14}}>Khu vực:</Text>
                         <Text style={{fontSize:14,marginLeft:10}}>Hà Nội</Text>
->>>>>>> 710b3eb1096e46a66890dfccd6658bdc3d17c2ed
                     </View>
+                </View>
 
-                    {/* view1 */}         
-                    <View style={styles.view2}>
-                        <View style={{flex:50,flexDirection:'row',marginTop:10,marginLeft:15, alignItems : "center"}}>
-                            <Icon name='bullseye' type='font-awesome' color='grey' size={16}></Icon>
-                            <Text style={{fontSize:14,marginLeft:5}}>Mọi người</Text>
-                        </View>
-                        <View style={{flex:50,flexDirection:'row',marginLeft:17,marginTop:10, alignItems : "center"}}>
-                            <Icon name='thermometer' type='font-awesome' color='grey' size={16}></Icon>
-                            <Text style={{fontSize:14,marginLeft:5}}>13 hạng mục xét nghiệm</Text>
-                        </View>
+                {/* view1 */}         
+                <View style={styles.view2}>
+                    <View style={{flex:50,flexDirection:'row',marginTop:10,marginLeft:15, alignItems : "center"}}>
+                        <Icon name='bullseye' type='font-awesome' color='grey' size={16}></Icon>
+                        <Text style={{fontSize:14,marginLeft:5}}>Mọi người</Text>
                     </View>
+                    <View style={{flex:50,flexDirection:'row',marginLeft:17,marginTop:10, alignItems : "center"}}>
+                        <Icon name='thermometer' type='font-awesome' color='grey' size={16}></Icon>
+                        <Text style={{fontSize:14,marginLeft:5}}>13 hạng mục xét nghiệm</Text>
+                    </View>
+                </View>
+                {/* view2 */}
+        </View>
+        {/* ============== */}
+        <Text style={{fontSize:18,fontWeight:'bold',marginLeft:20,marginTop:25}}>Chi tiết</Text>
+        {/* ============== */}
+        <View style = {styles.view00}>
+        {/* view0 */}
+        <FlatList 
+            data={datagoixntq}
+            renderItem={({item}) =><ItemGoixntq yyy={item}/> }
 
-            </View>
-
-            <Text style={{fontSize:18,fontWeight:'bold',marginLeft:20,marginTop:25}}>Chi tiết</Text>
-
-            <View style = {styles.view00}>
-
-                    <View style ={styles.view1}>
-                        <View style={{flex:65,borderTopEndRadius:5,marginLeft:15}}>
+            />
+             
+        </View>
+        {/* =========== */}
+        <View style={{flex:65,borderTopEndRadius:5,marginLeft:20}}>
                             <Text style={{fontSize:15,fontWeight:'bold'}}>NỘI DUNG XÉT NGHIỆM</Text>
                         </View>
-                    </View>
-            </View>
-            <FlatList 
-            data={datagoixntq}
-            renderItem={({item}) =><ItemGoixntq yyy={item} onPressBook={this.onPressBook.bind(this)} /> }
-            />
-      </ScrollView> 
+        {/* ============ */} 
+        <View style = {styles.view00}>
+        {/* view0 */}
+        <FlatList 
+            data={datagoixntq2}
+            renderItem={({item}) =><ItemGoixntq yyy={item} /> }
 
-<<<<<<< HEAD
-
-    
-=======
             />      
         </View>
-        {/* </ImageBackground> */}
+        </ImageBackground>
       </ScrollView>
           <View style={{height:70,flexDirection:'column',margin:10}}>
               <View style={{flex:30,flexDirection:'row',marginLeft:10}}>
@@ -107,28 +92,36 @@ export default class GoiXntqScreen extends React.Component {
        
             
       
->>>>>>> 710b3eb1096e46a66890dfccd6658bdc3d17c2ed
     );
   }
 }
 
 const styles = StyleSheet.create({
   viewx:{
-    height:700,
-    width:'100%',
+    flex:1,
+    height:'100%',
     backgroundColor:'#e9f7f1'
   },
-  view_1:{
-    height: 30,
-    flexDirection:'row',
-    justifyContent:'center',
-    alignItems:'center',
-    borderBottomWidth:0.3,
+  view0: {
+    flex : 1,
+    paddingBottom:20,
+    borderRadius:5,
+    marginLeft:17,
+    marginTop:200,
+    marginRight : 17,
+    marginBottom:10,
     backgroundColor:'white',
   },
+  view00: {
+    flex : 1,
+    paddingBottom:20,
+    borderRadius:5,
+    marginLeft:17,
+    marginRight : 17,
+    marginTop:10,
+    // backgroundColor:'white',
+  },
 
-<<<<<<< HEAD
-=======
   view1:{
     flex: 50,
     flexDirection:'column',
@@ -149,5 +142,4 @@ const styles = StyleSheet.create({
     height: 40,
     paddingTop: 5,
   },
->>>>>>> 710b3eb1096e46a66890dfccd6658bdc3d17c2ed
 });
