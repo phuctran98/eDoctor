@@ -12,7 +12,7 @@ export default class XNTN extends React.Component {
     this.onPressBook = this.onPressBook.bind(this);
   }
   onPressBook(){
-    this.props.navigation.navigate('GoiXntq')
+    this.props.navigation.navigate('datLichHen')
   }
   render() {
     return (
