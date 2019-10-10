@@ -10,7 +10,13 @@ import Itemdichvuphobien from '../component/Itemdichvuphobien'
 export default class Trangchu extends Component {
     render() {
         return (
-            <ScrollView style = {styles.container}>
+            <View style = {styles.container}>
+                <View style = {{width : "100%", height : 45, backgroundColor : "white", justifyContent : "center"}}>
+                    <Image source = {require('../avatar/images.png')} style={{width:30, height:30, marginLeft: 15}}>
+
+                    </Image>
+                </View>
+                <ScrollView >
                 <Text style = {{fontSize : 18, fontWeight: 'bold', marginLeft : 10}}>Dịch vụ</Text> 
                 <View style= {styles.dichvu}>
                     <View style = {{flexDirection : 'row'}}>
@@ -117,6 +123,8 @@ export default class Trangchu extends Component {
 
                 </FlatList>
             </ScrollView>
+            </View>
+            
         )
     }
 }

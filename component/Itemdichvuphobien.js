@@ -1,8 +1,5 @@
 import {View,Text,StyleSheet,Dimensions,TouchableOpacity}from 'react-native'
-
 import React, { Component } from 'react'
-
-
 export default class Itemdichvuphobien extends Component {
     render() {
         let screenWidth = Dimensions.get('window').width;

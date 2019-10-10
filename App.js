@@ -6,6 +6,7 @@ import GoiXntqScreen from './screen/GoiXntq'
 import datLichHenScreen from './screen/datLichHen'
 import { createAppContainer } from 'react-navigation'; 
 import { createStackNavigator } from 'react-navigation-stack';
+import Login from './screen/Login'
 
 const stack = createStackNavigator({
   TabNavigation: {
@@ -40,6 +41,12 @@ const stack = createStackNavigator({
   },
   datLichHen: {
     screen: datLichHenScreen,
+    navigationOptions: {
+      title:'Đặt lịch hẹn'
+    }
+  },
+  login: {
+    screen: Login,
     navigationOptions: {
       title:'Đặt lịch hẹn'
     }

@@ -6,6 +6,7 @@ import Trangchu from './Trangchu'
 import Lichhen from './Lichhen'
 import Congdong from './Congdong'
 import Hoso from './Hoso'
+import Login from './Login';
 
 const TabNavigation = createBottomTabNavigator({
   Trangchu: {
@@ -50,7 +51,7 @@ const TabNavigation = createBottomTabNavigator({
     },
   },
   Hoso: {  
-    screen: Hoso,
+    screen: Login,
     navigationOptions: {
       title : 'Hồ sơ',
       tabBarLabel: ({ tintColor }) => { return <Text style={{ color: "#94908f", textAlign:'center',fontSize : 12}}>Hồ sơ</Text> },

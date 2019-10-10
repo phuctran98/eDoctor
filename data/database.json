@@ -1,0 +1,28 @@
+{
+    "user": [
+      {
+        "id": 1,
+        "name": "james",
+        "email": "damnn@haposoft.com"
+      },
+      {
+        "id": 2,
+        "name": "james",
+        "email": "damnn@haposoft.com"
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "content": "fake REST API",
+        "user_id": 1
+      },
+      {
+        "id": 2,
+        "title": "json-server",
+        "content": "fake REST API",
+        "user_id": 2
+      }
+    ]
+  }
