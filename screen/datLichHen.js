@@ -53,9 +53,9 @@ export default class XNTN extends React.Component {
           </View>
         {/* ============ */} 
         <View style = {styles.view00}>
-            <Icon name='arrow-left' type='font-awesome' color='grey' size={18} marginRight={5}></Icon>
-            <FlatList data={datalichkham} horizontal={true} keyExtractor={(item, index) => index} renderItem={({item,index}) =><ItemLichKham item={item} index={index} selected={(input)=> this.NewSelected(input)} selectedIndex = {this.state.selected}/> } />
-            <Icon name='arrow-right' type='font-awesome' color='grey' size={18} marginLeft={5}></Icon>
+            {/* <Icon name='arrow-left' type='font-awesome' color='grey' size={18} marginRight={5}></Icon> */}
+            <FlatList data={datalichkham} horizontal={false} numColumns={2} keyExtractor={(item, index) => index} renderItem={({item,index}) =><ItemLichKham item={item} index={index} selected={(input)=> this.NewSelected(input)} selectedIndex = {this.state.selected}/> } />
+            {/* <Icon name='arrow-right' type='font-awesome' color='grey' size={18} marginLeft={5}></Icon> */}
         </View>
         {/* =========== */}
         <View style = {styles.view0}>
@@ -66,20 +66,6 @@ export default class XNTN extends React.Component {
                     </TouchableOpacity>
                     <TouchableOpacity  onPress={ this.onClick }  style={[styles.time, (this.backgroundColor)? {backgroundColor:'blue'} : {backgroundColor:'#e9f7f1'}]}>
                           <Text style={{marginRight:5}}>06:00</Text>
-                          <Text>sáng</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.time}>
-                          <Text style={{marginRight:5}}>06:30</Text>
-                          <Text>sáng</Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={{height:40,flexDirection:'row',}}>
-                    <TouchableOpacity  style={styles.time}>
-                          <Text style={{marginRight:5}}>07:00</Text>
-                          <Text>sáng</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity  style={styles.time}>
-                          <Text style={{marginRight:5}}>07:30</Text>
                           <Text>sáng</Text>
                     </TouchableOpacity>
                 </View>
@@ -93,9 +79,8 @@ export default class XNTN extends React.Component {
                 <Text style={{width:'20%',fontWeight:'bold',fontSize:16}}>850.000đ</Text>
               </View>
               <View style={{flex:70,flexDirection:'row'}}>
-              <TouchableOpacity style={styles.button}>
+              <TouchableOpacity onPress={() => {this.onPressBook()}} style={styles.button}>
                 <Text
-                  onPress={() => {this.onPressBook()}}
                   style={{fontSize: 14, fontWeight: 'bold', color: 'white', textAlign: 'center', paddingTop:4,}}>
                   Hoàn tất
                 </Text>
@@ -128,6 +113,7 @@ const styles = StyleSheet.create({
     backgroundColor:'white',
   },
   view00: {
+    flex:0.5,
     flexDirection : 'row',
     padding:20,
     borderRadius:5,

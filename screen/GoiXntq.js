@@ -17,11 +17,11 @@ export default class XNTN extends React.Component {
   render() {
     return (
   <View style={{flex: 1}}>
+    
+          
         <ScrollView style = {styles.viewx}>
       <ImageBackground source={require('../avatar/doctor.jpg')} style={{width: '100%', height: '45%'}}>
-                    <TouchableOpacity style={{flex:50,flexDirection:'row',marginTop:10,marginLeft:15, alignItems : "center"}} onPress={() => {this.props.navigation.navigate('XNTN')}}>
-                        <Icon name='arrow-left' type='font-awesome' color='white' size={18}></Icon>
-                    </TouchableOpacity>
+                    
         <View style = {styles.view0}>
         {/* view0 */}
                 <View style ={styles.view1}>
@@ -89,6 +89,11 @@ export default class XNTN extends React.Component {
           </TouchableOpacity>
         </View>
           </View>
+          <View style={{position:'absolute',backgroundColor:'rgba(100,100,100,0.1)',height:30,width:'100%',top:0}}>
+          <TouchableOpacity style={{flexDirection:'row',marginTop:5,marginLeft:15, alignItems : "center"}} onPress={() => {this.props.navigation.navigate('XNTN')}}>
+                        <Icon name='arrow-left' type='font-awesome' color='white' size={18}></Icon>
+          </TouchableOpacity>
+    </View>
   </View>
        
             

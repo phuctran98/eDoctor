@@ -27,10 +27,10 @@ export default class Trangchu extends Component {
     render() {
         return (
             <View style = {styles.container}>
-                <View style = {{width : "100%", height : 45, backgroundColor : "white", justifyContent : "center"}}>
+                <View style = {{width : "100%", height : 45,flexDirection:'row', backgroundColor:'white',alignItems:'center'}}>
                     <Image source = {require('../avatar/images.png')} style={{width:30, height:30, marginLeft: 15}}>
-
                     </Image>
+                    <Text style={{fontWeight:'bold'}}>eDoctor</Text>
                 </View>
                 <ScrollView >
                 <Text style = {{fontSize : 18, fontWeight: 'bold', marginLeft : 10}}>Dịch vụ</Text> 
