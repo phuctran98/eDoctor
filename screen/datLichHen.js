@@ -8,9 +8,11 @@ import { ScrollView } from 'react-native-gesture-handler';
 export default class XNTN extends React.Component {
   constructor(props) {
     super(props);
-    this.state={selected:0}
+    this.state={selected:0,backgroundColor: true}
     this.onPressBook = this.onPressBook.bind(this);
+    this.onClick = this.onClick.bind(this);
   }
+  
   onPressBook(){
     this.props.navigation.navigate('datLichHen')
   }
@@ -18,6 +20,11 @@ export default class XNTN extends React.Component {
   {
     this.setState({selected:input})
     console.log(input)
+  }
+  
+  onClick(input) {
+  console.log(input);
+  this.setState(() =>this.backgroundColor =! this.backgroundColor); 
   }
   render() {
     return (
@@ -53,19 +60,29 @@ export default class XNTN extends React.Component {
         {/* =========== */}
         <View style = {styles.view0}>
                 <View style={{height:40,flexDirection:'row',}}>
-                    <View style={{flexDirection:'row',backgroundColor:'#e9f7f1',width:100,borderRadius:5,marginTop:15,marginLeft:15,justifyContent:'center',alignItems:'center'}}>
-                          <Text>06:00</Text>
-                          <Text>Sáng</Text>
-                    </View>
-                    <View style={{flexDirection:'row',backgroundColor:'#e9f7f1',width:100,borderRadius:5,marginLeft:15,marginTop:15,justifyContent:'center',alignItems:'center'}}>
-                          <Text>06:00</Text>
-                          <Text>Sáng</Text>
-                    </View>
+                    <TouchableOpacity onPress={ this.onClick }  style={[styles.time, (this.backgroundColor)? {backgroundColor:'blue'} : {backgroundColor:'#e9f7f1'} ]}>
+                          <Text style={{marginRight:5}}>05:30</Text>
+                          <Text>sáng</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity  onPress={ this.onClick }  style={[styles.time, (this.backgroundColor)? {backgroundColor:'blue'} : {backgroundColor:'#e9f7f1'}]}>
+                          <Text style={{marginRight:5}}>06:00</Text>
+                          <Text>sáng</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.time}>
+                          <Text style={{marginRight:5}}>06:30</Text>
+                          <Text>sáng</Text>
+                    </TouchableOpacity>
                 </View>
-                
-                
-                
-                
+                <View style={{height:40,flexDirection:'row',}}>
+                    <TouchableOpacity  style={styles.time}>
+                          <Text style={{marginRight:5}}>07:00</Text>
+                          <Text>sáng</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity  style={styles.time}>
+                          <Text style={{marginRight:5}}>07:30</Text>
+                          <Text>sáng</Text>
+                    </TouchableOpacity>
+                </View>
         </View>
       </ScrollView>
 
@@ -142,4 +159,14 @@ const styles = StyleSheet.create({
     height: 40,
     paddingTop: 5,
   },
+  time:{
+    flexDirection:'row',
+    backgroundColor:'#e9f7f1',
+    width:100,
+    borderRadius:5,
+    marginTop:15,
+    marginLeft:12,
+    justifyContent:'center',
+    alignItems:'center'
+  }
 });
