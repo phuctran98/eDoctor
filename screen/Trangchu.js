@@ -6,11 +6,33 @@ import datasukien from '../data/datasukienn'
 import datadichvuphobien from '../data/dataDichvuphobien'
 import Itemsukien from '../component/Itemsukien'
 import Itemdichvuphobien from '../component/Itemdichvuphobien'
-
+import {getSKNB} from '../networking/Server'
 export default class Trangchu extends Component {
+    constructor(){
+        super();
+        this.state = ({
+            sknbFromServer : []
+        })
+    }
+    componentDidMount(){
+        this.refresDataFromServer();
+    }
+    refresDataFromServer = ()=>{
+        getSKNB().then((sknb)=>{
+            this.setState({ sknbFromServer:sknb })
+        }).catch((error)=>{
+            this.setState({sknbFromServer : []})
+        })
+    }
     render() {
         return (
-            <ScrollView style = {styles.container}>
+            <View style = {styles.container}>
+                <View style = {{width : "100%", height : 45, backgroundColor : "white", justifyContent : "center"}}>
+                    <Image source = {require('../avatar/images.png')} style={{width:30, height:30, marginLeft: 15}}>
+
+                    </Image>
+                </View>
+                <ScrollView >
                 <Text style = {{fontSize : 18, fontWeight: 'bold', marginLeft : 10}}>Dịch vụ</Text> 
                 <View style= {styles.dichvu}>
                     <View style = {{flexDirection : 'row'}}>
@@ -106,7 +128,10 @@ export default class Trangchu extends Component {
                 <Text style = {{fontSize : 18, fontWeight: 'bold', marginLeft : 10, marginTop : 20}}>
                     {"Sự kiện nổi bật"}
                 </Text>
-                <FlatList horizontal = {true} data ={datasukien} renderItem = {({item})=><Itemsukien xxx={item}></Itemsukien>} keyExtractor ={(xxx)=>xxx.header}>
+                <FlatList horizontal = {true} 
+                // data ={datasukien}
+                data = {this.state.sknbFromServer} 
+                renderItem = {({item})=><Itemsukien xxx={item}></Itemsukien>} keyExtractor ={(xxx)=>xxx.header}>
 
                 </FlatList>
                 <Text style = {{fontSize : 18, fontWeight: 'bold', marginLeft : 10, marginTop : 20}}>
@@ -117,6 +142,8 @@ export default class Trangchu extends Component {
 
                 </FlatList>
             </ScrollView>
+            </View>
+            
         )
     }
 }
