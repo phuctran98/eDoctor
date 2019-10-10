@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, StyleSheet, View, Alert,TouchableOpacity } from 'react-native';
+import { Text, Image, StyleSheet, View, Alert,TouchableOpacity,ScrollView } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 class ItemXntn extends Component {
@@ -10,7 +10,7 @@ class ItemXntn extends Component {
             {/* view0 */}
                     <View style ={styles.view1}>
                         <View style={{flex:25}}>
-                            <Image style={{width:70,height:60,borderRadius:5,marginLeft:10,marginTop:10, marginBottom : 10}} source={require('../avatar/doctor1.jpg')}></Image>
+                            <Image style={{width:70,height:60,borderRadius:5,marginTop:10, marginBottom : 10}} source={require('../avatar/doctor1.jpg')}></Image>
                         </View>
                         {/* image */}
                         <View style={{flex:65,borderTopEndRadius:5,marginTop:15,}}>
@@ -20,12 +20,12 @@ class ItemXntn extends Component {
                     </View>
                     {/* view1 */}         
                     <View style={styles.view2}>
-                         <Text style={{marginLeft:10,marginTop:10,marginBottom:5,width:'80%'}}>{this.props.xxx.mo_ta}</Text>  
+                         <Text style={{marginTop:5,paddingBottom:5,width:'80%'}}>{this.props.xxx.mo_ta}</Text>  
                     </View>
                     {/* view2 */}
 
                     <View style={styles.view3}>
-                        <View style={{flex:50,flexDirection:'row',marginTop:10,marginLeft:15, alignItems : "center"}}>
+                        <View style={{flex:50,flexDirection:'row',marginTop:10,marginLeft:5, alignItems : "center"}}>
                             <Icon name='bullseye' type='font-awesome' color='blue' size={15} marginTop={2}></Icon>
                             <Text style={{fontSize:14,marginLeft:5}}>{this.props.xxx.doi_tuong}</Text>
                         </View>
@@ -59,17 +59,21 @@ const styles = StyleSheet.create({
   view1:{
     flex: 40,
     flexDirection:'row',
-    borderBottomWidth:0.3,
+    borderBottomWidth:0.5,
     borderTopStartRadius:5,
     borderTopEndRadius:5,
-    // backgroundColor:'tomato'
+    marginLeft:20,
+    marginRight:20,
+    // backgroundColor:'tomato',
   },
 
   view2:{
     flex : 40,
     flexDirection:'row',
-    borderBottomWidth:0.3,
-    // backgroundColor:'green',
+    borderBottomWidth:0.5,
+    marginLeft:20,
+    marginRight:20,
+    // backgroundColor:'tan',
 
   },
   view3:{
@@ -77,6 +81,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     borderBottomStartRadius:5,
     borderBottomEndRadius:5,
+    marginLeft:15,
     // backgroundColor:'violet',
 
   },

@@ -8,7 +8,7 @@ export default class Itemdichvuphobien extends Component {
                 <View style = {{flex : 30 }} >
                     {this.props.xxx.image}
                 </View>
-                <View style = {{ width : screenWidth - 50 , height : screenWidth * 666/1440 - 80, borderBottomWidth : 0.2,marginLeft : 12 , marginTop : 18, marginRight : 12 }}>
+                <View style = {{ width : screenWidth - 50 , height : screenWidth * 666/1440 - 80, borderBottomWidth : 0.3,marginLeft : 12 , marginTop : 18, marginRight : 12 }}>
                     <Text style = {{fontSize : 15,fontWeight : 'bold'}}>
                         {this.props.xxx.header}
                     </Text>
