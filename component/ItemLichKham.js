@@ -1,27 +1,30 @@
 import React from 'react';
-import {StyleSheet,FlatList,Text,View, ImageBackground} from 'react-native';
-import datagoixntq from '../data/datagoixntq'
+import {StyleSheet,FlatList,Text,View, TouchableOpacity} from 'react-native';
+import datalichkham from '../data/datalichkham'
 import { Icon } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 export default class GoiXntq extends React.Component {
-
+  constructor(){
+    super()
+  }
   render() {
+    let selected =  this.props?.selectedIndex || 0;
     return (
-      <ScrollView style = {styles.viewx}>
-                    <View style ={{marginTop:5}}>
+      <TouchableOpacity onPress={()=>{this.props.selected(this.props.index)}} style = {[styles.viewx ,(selected === this.props.index) ?{borderColor:'red'}:{borderColor:'green'}]}>
+                    <View style ={styles.view1}>
                         <View style={{flex:65,borderTopEndRadius:5,marginLeft:15}}>
-                            <Text style={{fontSize:15}}>{this.props.yyy.buoc}</Text>
+                            <Text style={{fontSize:15}}>{this.props.item.day}</Text>
                         </View>
                     </View>
                     
-                    <View style ={{marginBottom:5}}>
+                    <View style ={styles.view1}>
                         <View style={{flex:65,borderTopEndRadius:5,marginLeft:15}}>
-                            <Text style={{fontSize:15}}>{this.props.yyy.noi_dung}</Text>
+                            <Text style={{fontSize:15}}>{this.props.item.time}</Text>
                         </View>
                     </View>
                     
                     {/* view1 */}         
-      </ScrollView> 
+      </TouchableOpacity> 
       
     );
   }
@@ -33,6 +36,7 @@ const styles = StyleSheet.create({
     height:'100%',
     borderRadius:5,
     backgroundColor:'white',
+    borderWidth :2
   },
   
 

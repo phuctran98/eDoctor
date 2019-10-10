@@ -15,21 +15,21 @@ const stack = createStackNavigator({
       header:null
     },
     tabBarOptions :{
-      activeTintColor : 'red'
+      activeTintColor : 'blue'
     }
   },
   XNTN: {
     screen: XNTNScreen,
     navigationOptions: {
-      title:'Xét nghiệm tại nhà'
+      title:'Xét nghiệm tại nhà',
       // header:null
     }
   },
   ItemXntn: {
     screen: ItemXntnScreen,
     navigationOptions: {
-      title:'Xét nghiệm tại nhà'
-      // header:null
+      title:'Xét nghiệm tại nhà',
+      header:null
     }
   },
   GoiXntq: {
@@ -42,7 +42,8 @@ const stack = createStackNavigator({
   datLichHen: {
     screen: datLichHenScreen,
     navigationOptions: {
-      title:'Đặt lịch hẹn'
+      title:'Đặt lịch hẹn',
+      // header:null
     }
   },
   login: {
