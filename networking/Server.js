@@ -1,8 +1,8 @@
-const apiSNTN = 'https://jsonplaceholder.typicode.com/comments'
+const apiSKNB = 'http://localhost:3000/sukiennoibat'
 
-async function getSNTN(){
+async function getSKNB(){
     try{
-        let response = await fetch(apiSNTN)
+        let response = await fetch(apiSKNB)
         let responseJson = await response.json()
         return responseJson;
     }
@@ -12,4 +12,4 @@ async function getSNTN(){
 
     }
 }
-export{getSNTN}
+export{getSKNB}
