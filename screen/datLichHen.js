@@ -2,15 +2,16 @@ import React from 'react';
 import {StyleSheet,FlatList,Text,View,TouchableOpacity} from 'react-native';
 import datalichkham from '../data/datalichkham'
 import ItemLichKham from '../component/ItemLichKham'
+import ItemGioKham from '../component/ItemGioKham'
 import { Icon,Avatar } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
+import datagiokham from '../data/datagiokham';
 
 export default class XNTN extends React.Component {
   constructor(props) {
     super(props);
-    this.state={selected:0,backgroundColor: true}
+    this.state={selected:0,picked:0}
     this.onPressBook = this.onPressBook.bind(this);
-    this.onClick = this.onClick.bind(this);
   }
   
   onPressBook(){
@@ -22,9 +23,10 @@ export default class XNTN extends React.Component {
     console.log(input)
   }
   
-  onClick(input) {
-  console.log(input);
-  this.setState(() =>this.backgroundColor =! this.backgroundColor); 
+  onPicked(input) 
+  {
+  this.setState({picked:input})
+  console.log(input)
   }
   render() {
     return (
@@ -53,22 +55,13 @@ export default class XNTN extends React.Component {
           </View>
         {/* ============ */} 
         <View style = {styles.view00}>
-            {/* <Icon name='arrow-left' type='font-awesome' color='grey' size={18} marginRight={5}></Icon> */}
-            <FlatList data={datalichkham} horizontal={false} numColumns={2} keyExtractor={(item, index) => index} renderItem={({item,index}) =><ItemLichKham item={item} index={index} selected={(input)=> this.NewSelected(input)} selectedIndex = {this.state.selected}/> } />
-            {/* <Icon name='arrow-right' type='font-awesome' color='grey' size={18} marginLeft={5}></Icon> */}
+            <Icon name='arrow-left' type='font-awesome' color='grey' size={18} marginRight={5}></Icon>
+            <FlatList data={datalichkham} horizontal={true} keyExtractor={(item, index) => index} renderItem={({item,index}) =><ItemLichKham item={item} index={index} selected={(input)=> this.NewSelected(input)} selectedIndex = {this.state.selected}/> } />
+            <Icon name='arrow-right' type='font-awesome' color='grey' size={18} marginLeft={5}></Icon>
         </View>
         {/* =========== */}
         <View style = {styles.view0}>
-                <View style={{height:40,flexDirection:'row',}}>
-                    <TouchableOpacity onPress={ this.onClick }  style={[styles.time, (this.backgroundColor)? {backgroundColor:'blue'} : {backgroundColor:'#e9f7f1'} ]}>
-                          <Text style={{marginRight:5}}>05:30</Text>
-                          <Text>sáng</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity  onPress={ this.onClick }  style={[styles.time, (this.backgroundColor)? {backgroundColor:'blue'} : {backgroundColor:'#e9f7f1'}]}>
-                          <Text style={{marginRight:5}}>06:00</Text>
-                          <Text>sáng</Text>
-                    </TouchableOpacity>
-                </View>
+            <FlatList data={datagiokham} numColumns={3} keyExtractor={(item, index) => index} renderItem={({item,index}) =><ItemGioKham item={item} index={index} picked={(input)=> this.onPicked(input)} pickedIndex = {this.state.picked}/> } />
         </View>
       </ScrollView>
 
